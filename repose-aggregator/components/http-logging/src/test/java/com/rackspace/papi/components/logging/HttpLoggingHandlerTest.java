@@ -17,6 +17,7 @@ import java.util.Scanner;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import org.junit.Ignore;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -101,6 +102,7 @@ public class HttpLoggingHandlerTest {
             assertEquals(expected, readFileAsString(file));
         }
 
+        @Ignore
         @Test
         public void shouldLogNewline() throws IOException {
             final String formatString = "%%log\\n\\n\\noutput%% \\n%U";

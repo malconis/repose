@@ -85,6 +85,7 @@ public class FileLoggerTest {
            return result;
         }
         
+        @Ignore
         @Test
         public void shouldHandleMoreThanBufferLimit() throws FileNotFoundException, IOException {
            long dataLen = 3 * FileLogger.BUFFER_LIMIT + 1;

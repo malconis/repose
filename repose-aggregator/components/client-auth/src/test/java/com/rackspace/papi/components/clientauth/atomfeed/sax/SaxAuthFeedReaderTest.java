@@ -35,8 +35,8 @@ public class SaxAuthFeedReaderTest {
 
       client = mock(ServiceClient.class);
 
-      FilePathReaderImpl fileReader1 = new FilePathReaderImpl(File.separator + "META-INF" + File.separator + "feed.xml");
-      FilePathReaderImpl fileReader2 = new FilePathReaderImpl(File.separator + "META-INF" + File.separator + "empty-feed.xml");
+      FilePathReaderImpl fileReader1 = new FilePathReaderImpl("/META-INF/feed.xml");
+      FilePathReaderImpl fileReader2 = new FilePathReaderImpl("/META-INF/empty-feed.xml");
       resp1 = new ServiceClientResponse(200, fileReader1.getResourceAsStream());
 
       resp2 = new ServiceClientResponse(200, fileReader2.getResourceAsStream());

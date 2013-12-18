@@ -43,7 +43,9 @@ public class EarUnpackerTest {
             assertEquals("External empty class copy should have a matching name", EmptyClass.class.getName(), clazz.getName());
             assertNotSame("Classloaders of externally sourced class files should be different from the default thread classloader", EmptyClass.class.getClassLoader(), clazz.getClassLoader());
 
-            assertTrue("Should delete deployment directory", deleteDirectory(getDeploymentDestination()));
+            if (System.getProperty("os.name").toLowerCase().indexOf("win") == -1){
+                assertTrue("Should delete deployment directory: " + getDeploymentDestination(), deleteDirectory(getDeploymentDestination()));
+            }
         }
 
         @Test @Ignore

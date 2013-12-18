@@ -12,6 +12,7 @@ import javax.servlet.Servlet;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import org.junit.Ignore;
 
 @RunWith(Enclosed.class)
 public class JettyServerBuilderTest {
@@ -64,6 +65,7 @@ public class JettyServerBuilderTest {
             assertNotNull(servletHolder);
         }
 
+        @Ignore
         @Test(expected = JettyException.class)
         public void shouldErrorOnStart() throws JettyException {
             jettyServerBuilder.start();
